@@ -1,0 +1,21 @@
+{
+  "name": "product-app-with-checkbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agantuk-sarkar/product-app-with-checkbox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agantuk-sarkar/product-app-with-checkbox/issues"
+  },
+  "homepage": "https://github.com/agantuk-sarkar/product-app-with-checkbox#readme"
+}
