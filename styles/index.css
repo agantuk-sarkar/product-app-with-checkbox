@@ -27,6 +27,7 @@
     height:100%;
     width:35%;
     border-radius:50%;
+    position:relative;
 
     img{
         height:100%;
@@ -192,4 +193,15 @@
     color:white;
     border-radius:5px;
     cursor:pointer;
+}
+
+.hover-box{
+    /* border:2px solid blue; */
+    height:8rem;
+    width:200%;
+    position:absolute;
+    top:4rem;
+    /* background-color:yellowgreen; */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
 }

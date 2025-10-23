@@ -113,10 +113,10 @@ async function getCategoryList(){
         checkBox_and_category_container.classList.add("checkBox-category-container");
 
         const checkBox = document.createElement("input");
+        // console.log('checkBox:', checkBox)
         checkBox.id = category;
+        // console.log('checkBox.id:', checkBox.id)
         checkBox.type = "checkbox";
-        // console.log(checkBox);
-        // console.log(checkBox.id);
 
         // change event for input checkbox
         checkBox.addEventListener("change",()=>{
@@ -124,7 +124,7 @@ async function getCategoryList(){
             // taking all the input element into an array
             const allCheckBoxes = document.querySelectorAll(".checkBox-category-container  input");
 
-            console.log(allCheckBoxes);
+            // console.log(allCheckBoxes);
 
             // this is to check if the input box is checked/clicked matches then don't do anything, only uncheck the ones which doesn't match
             allCheckBoxes.forEach((eachCheckbox)=>{
@@ -256,3 +256,30 @@ function applyThemePreference(){
         theme_icon.append(moon_icon,moon_icon_text);
     }
 }
+
+// hover on logo image icon
+const logo_image_box = document.querySelector(".logo-image");
+
+logo_image_box.addEventListener("mouseover",()=>{
+
+    const hover_box = document.createElement("div");
+    const image_tag = document.createElement("img");
+    image_tag.src = "https://cdn.dummyjson.com/product-images/groceries/apple/thumbnail.webp"
+    hover_box.classList.add("hover-box");
+    hover_box.append(image_tag);
+    logo_image_box.append(hover_box);
+    search_input.style.visibility = "hidden";
+    cross_button.style.visibility = "hidden";
+    
+
+});
+
+logo_image_box.addEventListener("mouseleave",()=>{
+    
+    const no_hover_box = document.querySelector(".logo-image > div");
+    // console.log('no_hover_box:', no_hover_box)
+    no_hover_box.style.visibility = "hidden";
+    logo_image_box.removeChild(no_hover_box);
+    search_input.style.visibility = "visible";
+    cross_button.style.visibility = "visible";
+})
